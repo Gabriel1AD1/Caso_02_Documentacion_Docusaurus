@@ -19,4 +19,4 @@ Hemos elaborado un script para uso en instancias Linux con Ubuntu 18 o superior.
 
 En caso de contar con servicios instalados en su instancia como MySQL, Apache o Nginx, debe detenerlos, ya que estos ocupan los puertos que pasarán a usar el aplicativo con los contenedores de Docker.
 
-![Docusaurus Logo](.documentacion/img/Manual_IMG_01.png)
+![Docusaurus Logo](./img/Imagen01.png)
