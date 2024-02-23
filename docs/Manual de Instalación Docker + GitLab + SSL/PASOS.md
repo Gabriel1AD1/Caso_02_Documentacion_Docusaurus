@@ -1,76 +1,77 @@
 ---
 sidebar_position: 3
 ---
+# Pasos
 
-### Pasos
-
-1. **Acceder a la instancia vía SSH:**
+1. **Acceder a su instancia vía SSH.**
     ```bash
-    ssh usuario@direccion_ip
+    ssh usuario@ip_del_servidor
     ```
 
-2. **Loguearse como super usuario:**
+2. **Loguearse como super usuario**
     ```bash
     sudo su
     ```
 
-3. **Clonar el snippet de GitLab que contiene el script:**
+3. **Ubicarse en la carpeta del usuario, por ejemplo**
     ```bash
-    git clone https://gitlab.com/snippets/2079063.git script
+    cd /home/ubuntu/
     ```
 
-4. **Ingresar a la carpeta clonada:**
+4. **Crear el archivo `install`**
     ```bash
-    cd script
+    touch install.sh
     ```
 
-5. **Dar permisos de ejecución al script:**
+5. **Editar el archivo con su editor preferido**
     ```bash
-    chmod +x install.sh
+    nano install.sh
     ```
 
-6. **Ejecutar el script de instalación con el parámetro del dominio:**
+    - En el archivo, agregar el contenido del siguiente [enlace](https://gitlab.com/snippets/1852652).
+
+    - Para salir del editor y guardar, presionar `Ctrl + x`, confirmar con `y`, y luego `Enter`.
+
+6. **Darle permisos de ejecución al archivo**
+    - En el archivo debe agregar el contenido del siguiente enlace: https://gitlab.com/snippets/1852652 Observará a una página como la siguiente, donde debe copiar el contenido del script y pegarlo en su archivo install.sh, es importante que mantenga las estructura del mismo.
+
+    ![INFO GITLAB](./img/Imagen02.png)
+
+
+7. **Para salir de editor y guardar puede presionar “ctrl + x” seguidamente se le consultará  si desea guardar los cambios, confirme con “y” y luego “enter”.**
+
+8. **Debe darle permisos de ejecución al archivo: ejecute chmod +x install.sh**
+
+9. **El comando a utilizar requiere de dos parámetros principalmente:**
     ```bash
-    ./install.sh [dominio]
+    ./install.sh [repositorio] [dominio]
     ```
-    Por ejemplo:
+    por ejemplo:
     ```bash
-    ./install.sh facturador.pro
+    ./install.sh https://gitlab.com/rash07/facturadorpro2 elfacturador.com
     ```
 
-7. **Una vez ejecutado el comando iniciará el proceso de actualización del sistema, en el proceso se le solicitará:**
-    1. El usuario y contraseña de GitLab, para que se pueda descargar el proyecto en su instancia
+10. **Una vez ejecutado el comando se iniciará un proceso donde debe ir aceptando las preguntas y que le mostrará en pantalla los valores que debe añadir en los 2 récords tipo TXT de su dominio con nombre**
+    - _acme-challenge.example.com .
+    - _acme-challenge (casos como godday y puntope)
 
-    2. Si desea instalar  SSL gratuito, tenga en cuenta que este debe ser actualizado cada 90 días, el mensaje será el siguiente:
-        +   Instalar con SSL? (debe tener acceso al panel de su dominio para editar/agregar records TXT). **si[s]** **no[n]**
-            1. Deberá contestar con “s” o “n” para continuar
+**En la siguiente imagen le muestran el valor como v703JW.... debera copiarlo y añadirlo al primer record TXT, seguidamente pulsar enter, se le mostrará en pantalla un segundo valor para el segundo TXT**
 
-            2. Si selecciona SÍ, deberá contestar las siguientes preguntas con “y”, son 2 en total, seguidamente se le ofrecerá un código que debe añadir en un récord tipo TXT en su dominio quedando como _acme-challenge.example.com o simplemente _acme-challenge dependerá de su proveedor.
+    ![BASH](./img/Imagen03.png)
 
-            3. Para continuar presione enter, luego deberá repetir las acciones para añadir un segundo código y habrá finalizado la configuración, si el proceso es exitoso la ejecución del script continuará.
+11. **Editados los récords en su dominio, deberá aceptar para continuar y que el proceso verifique que sea exitoso, de ser exitoso obtendrá una pantalla similar a la siguiente**
 
-            ![Terminal referencia](#)
+    ![BASH](./img/Imagen04.png)
 
+12. **Continuará el proceso de actualización del sistema, se le solicitará el usuario y contraseña de GitLab, para que se pueda clonar/descargar el proyecto en su instancia, luego culminará y tendrá los accesos listos en su dominio**
+    1. Correo: admin@gmail.com
+    2. Contraseña: 123456
 
-    3. Si desea obtener y gestionar actualizaciones automáticas, deberá disponer de su sesión de gitlab al momento configurar clave SSH para actualización automática? 
-    (requiere acceso a https://gitlab.com/profile/keys)
-    **si[***s***]** **no[***n***]**    
-        1. deberá contestar con “s” o “n” para continuar
+### Una vez finalizado, puede proseguir con el manual de pruebas o demás documentación de cada proyecto, sus URL son:
 
-        2. de seleccionar SÍ, al final del despliegue se le dará un extracto de texto que debe añadir a su configuración de gitlab
+**PRO1:**
+https://gitlab.com/rash07/facturadorpro1
 
-
-        ![Terminal referencia](#)
-
-
-8. **Finalizado el script y dependiendo de sus selecciones anteriores, se le entregará varios datos que debe guardar, como:**
-
-    1. Usuario administrador
-    2. Contraseña para usuario administrador
-    3. Url del proyecto
-    4. Ubicación del proyecto dentro del servidor
-    5. Clave ssh para añadir a gitlab (obligatorio para quienes seleccionan la instalación de   SSH)
-
-
-
+**PRO2:**
+https://gitlab.com/rash07/facturadorpro2
 
