@@ -14,4 +14,4 @@ sidebar_position: 2
 
 En caso de contar con servicios instalados en su instancia como MySQL, Apache o Nginx, debe detenerlos, ya que estos ocupan los puertos que pasarán a usar el aplicativo con los contenedores de Docker.
 
-![Docusaurus Logo](./img/Imagen01.png)
+![Docusaurus Logo](#)
