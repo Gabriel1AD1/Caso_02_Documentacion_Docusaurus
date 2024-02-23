@@ -49,7 +49,7 @@ sidebar_position: 3
 
             3. Para continuar presione enter, luego deberá repetir las acciones para añadir un segundo código y habrá finalizado la configuración, si el proceso es exitoso la ejecución del script continuará.
 
-            ![Terminal referencia](./img/Imagen02.png)
+            ![Terminal referencia](#)
 
 
     3. Si desea obtener y gestionar actualizaciones automáticas, deberá disponer de su sesión de gitlab al momento configurar clave SSH para actualización automática? 
@@ -60,7 +60,7 @@ sidebar_position: 3
         2. de seleccionar SÍ, al final del despliegue se le dará un extracto de texto que debe añadir a su configuración de gitlab
 
 
-        ![Terminal referencia](./img/Imagen03.png)
+        ![Terminal referencia](#)
 
 
 8. **Finalizado el script y dependiendo de sus selecciones anteriores, se le entregará varios datos que debe guardar, como:**
