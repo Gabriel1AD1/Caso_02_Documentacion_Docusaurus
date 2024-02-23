@@ -1,16 +1,28 @@
 ---
 sidebar_position: 4
 ---
-## Enlaces de Interés
+# Recomendaciones
 
-- [Actualización de SSL](https://gitlab.com/b.mendoza/facturadorpro3/snippets/1955372)  
-  Información sobre el proceso de actualización de SSL.
+Después de instalar el facturador, se sugiere realizar algunas configuraciones adicionales en el archivo `.env` para adaptar el sistema a sus necesidades:
 
-- [Actualización mediante ejecución Script para instalaciones Docker](https://gitlab.com/b.mendoza/facturadorpro3/-/wikis/Script-Update-Docker)  
-  Instrucciones específicas para la actualización utilizando un script en instalaciones Docker.
+- **Dirección de envío de correos:** Modificar la dirección de envío de correos utilizada por el facturador para enviar archivos PDF, XML y CDR a los clientes.
 
-- [Gestión de SSL independiente](https://docs.google.com/document/d/1D87YJ9fq9yHiAauu6SGVugiC3m_i42DrFUt6VKYXuDI/edit?usp=sharing)  
-  Detalles sobre la gestión de SSL de forma independiente, no utilizando el script incorporado.
+- **Configuraciones de plantillas PDF:** Ajustar algunas configuraciones de las plantillas de los archivos PDF según las preferencias o requisitos específicos.
 
-- [Guía de instalación en GitLab](https://gitlab.com/b.mendoza/facturadorpro3/snippets/1971490)  
-  Guía oficial de GitLab para la instalación, incluye el script utilizado en este manual y parámetros adicionales para la ejecución del paso 6.
+Recuerde seguir estos pasos adicionales:
+
+1. **Configuración del archivo .env:**
+   - Edite el archivo `.env` con las configuraciones deseadas.
+
+2. **Actualizar configuración en el contenedor FPM1:**
+   - Después de editar el archivo `.env`, es necesario ejecutar el siguiente comando dentro del contenedor FPM1 para refrescar la configuración:
+     ```bash
+     php artisan config:cache
+     ```
+   - Esto asegura que los cambios en la configuración se apliquen correctamente.
+
+3. **Permisos de la ruta de ejecución del script:**
+   - La ruta donde ejecutó el script será donde se clone el repositorio. Asegúrese de que los usuarios del servidor tengan los permisos adecuados en esa ruta.
+   - Esto es crucial si planea acceder desde FTP o SCP.
+
+Estas recomendaciones garantizan una configuración óptima y funcionalidad del facturador después de la instalación inicial.
