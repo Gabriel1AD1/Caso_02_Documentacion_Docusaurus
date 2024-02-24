@@ -44,9 +44,10 @@
 
 7. Con esto, habrá completado la configuración del lado de la herramienta. En este momento, no podrá acceder a la herramienta hasta que tenga SSL configurado.
 
-### Importante:
+:::info Importante:
 
-- Recuerde habilitar el puerto 443 para tener acceso a la herramienta.
+Recuerde habilitar el puerto 443 para tener acceso a la herramienta.
 
 
-Este formato facilita la lectura y comprensión de los pasos para la instalación del Facturador con Docker en Linux y SSL externo.
+Este formato facilita la lectura y comprensión de los pasos para la instalación del Facturador con Docker en Linux y SSL externo
+:::

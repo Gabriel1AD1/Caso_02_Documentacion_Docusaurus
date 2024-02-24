@@ -10,8 +10,10 @@ sidebar_position: 2
   - [Guía para acceder con WinSCP (gestión de archivos con aplicación de escritorio)](enlace_a_la_guia_winscp)
 - Si es posible, configurar su dominio apuntando a su instancia para que al finalizar la instalación se encuentre disponible el aplicativo. Edite los registros A y CNAME, donde A debe contener su IP y CNAME el valor * (asterisco) para que se tomen los subdominios registrados por la herramienta.
 
-### Precaución
+:::info Precaución
 
 En caso de contar con servicios instalados en su instancia como MySQL, Apache o Nginx, debe detenerlos, ya que estos ocupan los puertos que pasarán a usar el aplicativo con los contenedores de Docker.
+:::
+
 
 ![Docusaurus Logo](./img/Imagen01.png)
